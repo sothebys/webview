@@ -160,7 +160,7 @@ external nativeConfig:
 [@react.component] [@bs.module "react-native-webview"]
 external make:
   (
-    ~ref: ref=?,
+    ~ref: ReactNativeWebView_Element.ref=?,
     // WebView props
     ~allowingReadAccessToURL: string=?,
     ~allowFileAccess: bool=?,
