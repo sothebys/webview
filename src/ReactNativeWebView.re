@@ -160,7 +160,7 @@ external nativeConfig:
 [@react.component] [@bs.module "react-native-webview"]
 external make:
   (
-    ~ref: ref=?,
+    ~ref: ReactNativeWebView_Element.ref=?,
     // WebView props
     ~allowingReadAccessToURL: string=?,
     ~allowFileAccess: bool=?,
@@ -241,35 +241,6 @@ external make:
     ~ignoreSilentHardwareSwitch: bool=?,
     ~thirdPartyCookiesEnabled: bool=?,
     ~userAgent: string=?,
-    // View props 0.63.0
-    ~accessibilityActions: array(Accessibility.actionInfo)=?,
-    ~accessibilityElementsHidden: bool=?,
-    ~accessibilityHint: string=?,
-    ~accessibilityIgnoresInvertColors: bool=?,
-    ~accessibilityLabel: string=?,
-    ~accessibilityLiveRegion: Accessibility.liveRegion=?,
-    ~accessibilityRole: Accessibility.role=?,
-    ~accessibilityState: Accessibility.state=?,
-    ~accessibilityValue: Accessibility.value=?,
-    ~accessibilityViewIsModal: bool=?,
-    ~accessible: bool=?,
-    ~collapsable: bool=?,
-    ~hitSlop: View.edgeInsets=?,
-    ~importantForAccessibility: [@bs.string] [
-                                  | `auto
-                                  | `yes
-                                  | `no
-                                  | [@bs.as "no-hide-descendants"]
-                                    `noHideDescendants
-                                ]
-                                  =?,
-    ~nativeID: string=?,
-    ~needsOffscreenAlphaCompositing: bool=?,
-    ~onAccessibilityAction: Accessibility.actionEvent => unit=?,
-    ~onAccessibilityEscape: unit => unit=?,
-    ~onAccessibilityTap: unit => unit=?,
-    ~onLayout: Event.layoutEvent => unit=?,
-    ~onMagicTap: unit => unit=?,
     // Gesture Responder props
     ~onMoveShouldSetResponder: Event.pressEvent => bool=?,
     ~onMoveShouldSetResponderCapture: Event.pressEvent => bool=?,
